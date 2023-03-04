@@ -34,6 +34,8 @@ public class Utilisateur {
         return "Utilisateur{" + "id=" + id + ", email=" + email + ", motdepasse=" + motdepasse + ", Firstname=" + Firstname + ", Lastname=" + Lastname + ", address=" + address + ", telephone=" + telephone + ", Roles=" + Roles + '}';
     }
 
+  
+
     public String getAddress() {
         return address;
     }

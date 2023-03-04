@@ -46,7 +46,7 @@ public class ServiceUtilisateur {
     }
 
     //Signup
-    public void signup(TextField firstname, ComboBox<String> roles, TextField lastname, TextField password, TextField email, TextField address, TextField telephone, Resources res) {
+    public void signup(TextField email, ComboBox<String> roles, TextField password,TextField firstname,  TextField lastname,  TextField address, TextField telephone, Resources res) {
 
         String url = Statics.BASE_URL + "/User/signup?email=" +email.getText().toString() 
                 + "&roles" + roles.getSelectedItem().toString()
@@ -86,7 +86,7 @@ public class ServiceUtilisateur {
     //SignIn
     public void signin(TextField email, TextField password, Resources rs) {
 
-        String url = Statics.BASE_URL + "/User/signin?email=" + email.getText().toString() + "&password=" + password.getText().toString();
+        String url = Statics.BASE_URL +"/User/signin?email="+ email.getText().toString()+"&password="+password.getText().toString();
         req = new ConnectionRequest(url, false); //false ya3ni url mazlt matba3thtich lel server
         req.setUrl(url);
 

@@ -9,5 +9,5 @@ package com.bibliotheque.utils;
  * @author moham
  */
 public class Statics {
-    public static final String BASE_URL="https://127.0.0.1:8000 ";
+    public static final String BASE_URL="http://127.0.0.1:8000";
 }

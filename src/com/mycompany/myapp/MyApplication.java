@@ -53,8 +53,8 @@ public class MyApplication {
             current.show();
             return;
         }
-        new SignInForm(theme).show();
-        /*new SignUpForm(theme).show();*/
+        /*new SignInForm(theme).show();*/
+        new SignUpForm(theme).show();
     }
 
     public void stop() {

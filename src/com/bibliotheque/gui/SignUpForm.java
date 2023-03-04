@@ -36,11 +36,10 @@ public class SignUpForm extends BaseForm  {
         Form previous = Display.getInstance().getCurrent();
         tb.setBackCommand("", e -> previous.showBack());
         setUIID("SignIn");
-                
-        TextField firstname = new TextField("", "firstname", 20, TextField.ANY);
-        TextField lastname = new TextField("", "lastname", 20, TextField.ANY);
         TextField email = new TextField("", "E-Mail", 20, TextField.EMAILADDR);
         TextField password = new TextField("", "Password", 20, TextField.PASSWORD);
+        TextField firstname = new TextField("", "firstname", 20, TextField.ANY);
+        TextField lastname = new TextField("", "lastname", 20, TextField.ANY);
         TextField address = new TextField("", "address", 20, TextField.ANY);
         TextField telephone = new TextField("", "telephone", 20, TextField.ANY);
            //Role 
@@ -50,13 +49,11 @@ public class SignUpForm extends BaseForm  {
         
         vectorRole.add("Patient");
         vectorRole.add("Admin");
-        
+        email.setSingleLineTextArea(false);
         ComboBox<String>roles = new ComboBox<>(vectorRole);
-
+        password.setSingleLineTextArea(false);
         firstname.setSingleLineTextArea(false);
         lastname.setSingleLineTextArea(false);
-        email.setSingleLineTextArea(false);
-        password.setSingleLineTextArea(false);
         address.setSingleLineTextArea(false);
         telephone.setSingleLineTextArea(false);
         Button next = new Button("SignUp");
