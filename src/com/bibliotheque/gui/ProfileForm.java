@@ -10,7 +10,6 @@ import com.codename1.ui.Command;
 import com.codename1.ui.Component;
 import com.codename1.ui.Container;
 import com.codename1.ui.Display;
-import com.codename1.ui.Image;
 import com.codename1.ui.Label;
 import com.codename1.ui.TextField;
 import com.codename1.ui.Toolbar;
@@ -41,52 +40,6 @@ public class ProfileForm extends BaseForm {
         tb.addSearchCommand(e -> {
         });
 
-        Image img = res.getImage("profile-background.jpg");
-        if (img.getHeight() > Display.getInstance().getDisplayHeight() / 3) {
-            img = img.scaledHeight(Display.getInstance().getDisplayHeight() / 3);
-        }
-        ScaleImageLabel sl = new ScaleImageLabel(img);
-        sl.setUIID("BottomPad");
-        sl.setBackgroundType(Style.BACKGROUND_IMAGE_SCALED_FILL);
-
-        Label facebook = new Label("786 followers", res.getImage("facebook-logo.png"), "BottomPad");
-        Label twitter = new Label("486 followers", res.getImage("twitter-logo.png"), "BottomPad");
-        facebook.setTextPosition(BOTTOM);
-        twitter.setTextPosition(BOTTOM);
-
-        add(LayeredLayout.encloseIn(
-                sl,
-                BorderLayout.south(
-                        GridLayout.encloseIn(3,
-                                facebook,
-                                FlowLayout.encloseCenter(
-                                        new Label(res.getImage("profile-pic.jpg"), "PictureWhiteBackgrond")),
-                                twitter
-                        )
-                )
-        ));
-
-        TextField username = new TextField("sandeep");
-        username.setUIID("TextFieldBlack");
-        addStringValue("Username", username);
-
-        TextField email = new TextField("sandeep@gmail.com", "E-Mail", 20, TextField.EMAILADDR);
-        email.setUIID("TextFieldBlack");
-        addStringValue("E-Mail", email);
-
-        TextField password = new TextField("sandeep", "Password", 20, TextField.PASSWORD);
-        password.setUIID("TextFieldBlack");
-        addStringValue("Password", password);
-
-        CheckBox cb1 = CheckBox.createToggle(res.getImage("on-off-off.png"));
-        cb1.setUIID("Label");
-        cb1.setPressedIcon(res.getImage("on-off-on.png"));
-        CheckBox cb2 = CheckBox.createToggle(res.getImage("on-off-off.png"));
-        cb2.setUIID("Label");
-        cb2.setPressedIcon(res.getImage("on-off-on.png"));
-
-        addStringValue("Facebook", FlowLayout.encloseRightMiddle(cb1));
-        addStringValue("Twitter", FlowLayout.encloseRightMiddle(cb2));
     }
 
     private void addStringValue(String s, Component v) {

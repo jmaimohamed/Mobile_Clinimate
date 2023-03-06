@@ -29,12 +29,7 @@ public class SignUpForm extends BaseForm  {
 
     public SignUpForm(Resources res) {
         super(new BorderLayout());
-        Toolbar tb = new Toolbar(true);
-        setToolbar(tb);
-        tb.setUIID("Container");
-        getTitleArea().setUIID("Container");
-        Form previous = Display.getInstance().getCurrent();
-        tb.setBackCommand("", e -> previous.showBack());
+       
         setUIID("SignIn");
         TextField email = new TextField("", "E-Mail", 20, TextField.EMAILADDR);
         TextField password = new TextField("", "Password", 20, TextField.PASSWORD);
@@ -42,8 +37,6 @@ public class SignUpForm extends BaseForm  {
         TextField lastname = new TextField("", "lastname", 20, TextField.ANY);
         TextField address = new TextField("", "address", 20, TextField.ANY);
         TextField telephone = new TextField("", "telephone", 20, TextField.ANY);
-           //Role 
-        //Vector 3ibara ala array 7atit fiha roles ta3na ba3d nzidouhom lel comboBox
         Vector<String> vectorRole;
         vectorRole = new Vector();
         
@@ -77,7 +70,7 @@ public class SignUpForm extends BaseForm  {
                 new FloatingHint(address),
                 createLineSeparator(),
                 new FloatingHint(telephone),
-                createLineSeparator()//sinon y7otich role fi form ta3 signup
+                createLineSeparator()
         );
         content.setScrollableY(true);
         add(BorderLayout.CENTER, content);

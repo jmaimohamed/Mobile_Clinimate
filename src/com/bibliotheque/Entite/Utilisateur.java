@@ -12,7 +12,7 @@ public class Utilisateur {
 
     private int id;
     private String email;
-    private String motdepasse;
+    private String password;
     private String Firstname;
     private String Lastname;
     private String address;
@@ -21,7 +21,7 @@ public class Utilisateur {
 
     public Utilisateur(String email, String motdepasse, String Firstname, String Lastname, String address, String telephone, String Roles) {
         this.email = email;
-        this.motdepasse = motdepasse;
+        this.password = motdepasse;
         this.Firstname = Firstname;
         this.Lastname = Lastname;
         this.address = address;
@@ -31,7 +31,7 @@ public class Utilisateur {
 
     @Override
     public String toString() {
-        return "Utilisateur{" + "id=" + id + ", email=" + email + ", motdepasse=" + motdepasse + ", Firstname=" + Firstname + ", Lastname=" + Lastname + ", address=" + address + ", telephone=" + telephone + ", Roles=" + Roles + '}';
+        return "Utilisateur{" + "id=" + id + ", email=" + email + ", motdepasse=" + password + ", Firstname=" + Firstname + ", Lastname=" + Lastname + ", address=" + address + ", telephone=" + telephone + ", Roles=" + Roles + '}';
     }
 
   
@@ -64,7 +64,7 @@ public class Utilisateur {
 
     public Utilisateur(String email, String motdepasse) {
         this.email = email;
-        this.motdepasse = motdepasse;
+        this.password = motdepasse;
     }
 
     public int getId() {
@@ -83,12 +83,12 @@ public class Utilisateur {
         this.email = email;
     }
 
-    public String getMotdepasse() {
-        return motdepasse;
+    public String getPassword() {
+        return password;
     }
 
-    public void setMotdepasse(String motdepasse) {
-        this.motdepasse = motdepasse;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getFirstname() {

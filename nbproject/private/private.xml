@@ -3,6 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/xampp/htdocs/CodeNameOne/Pi_Clinimate/src/com/bibliotheque/gui/SessionManager.java</file>
+            <file>file:/C:/xampp/htdocs/CodeNameOne/Pi_Clinimate/src/com/bibliotheque/gui/UpdateForm.java</file>
+            <file>file:/C:/xampp/htdocs/CodeNameOne/Pi_Clinimate/src/com/bibliotheque/gui/ProfileForm.java</file>
+            <file>file:/C:/xampp/htdocs/CodeNameOne/Pi_Clinimate/src/com/bibliotheque/gui/showForm.java</file>
+            <file>file:/C:/xampp/htdocs/CodeNameOne/Pi_Clinimate/src/com/bibliotheque/utils/Statics.java</file>
+            <file>file:/C:/xampp/htdocs/CodeNameOne/Pi_Clinimate/src/com/bibliotheque/gui/WalkthruForm.java</file>
+            <file>file:/C:/xampp/htdocs/CodeNameOne/Pi_Clinimate/src/com/mycompany/myapp/MyApplication.java</file>
+            <file>file:/C:/xampp/htdocs/CodeNameOne/Pi_Clinimate/src/com/bibliotheque/gui/SignUpForm.java</file>
+            <file>file:/C:/xampp/htdocs/CodeNameOne/Pi_Clinimate/src/com/bibliotheque/gui/SignInForm.java</file>
+            <file>file:/C:/xampp/htdocs/CodeNameOne/Pi_Clinimate/src/com/bibliotheque/Service/ServiceUtilisateur.java</file>
+            <file>file:/C:/xampp/htdocs/CodeNameOne/Pi_Clinimate/src/com/bibliotheque/Entite/Utilisateur.java</file>
+            <file>file:/C:/xampp/htdocs/CodeNameOne/Pi_Clinimate/src/com/bibliotheque/gui/BaseForm.java</file>
+        </group>
     </open-files>
 </project-private>
