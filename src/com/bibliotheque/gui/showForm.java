@@ -51,6 +51,7 @@ public class showForm extends BaseForm {
             add(new Label(sId));
             add(new Label(t.getFirstname()));
             add(new Label(t.getLastname()));
+            System.out.println(t.getFirstname());
             Button Delete = new Button("Delete");
             Button Update = new Button("Update");
             Delete.addActionListener(e -> {
