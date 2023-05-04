@@ -57,12 +57,11 @@ public class showForm extends BaseForm {
 
                 Dialog dig = new Dialog("Suppression");
 
-                if (dig.show("Suppression", "delete account ?", "Annuler", "Oui")) {
+                if (dig.show("Delete", "delete account ?", "Annuler", "Oui")) {
                     dig.dispose();
                 } else {
                     dig.dispose();
                 }
-                //n3ayto l suuprimer men service Reclamation
                 if (ServiceUtilisateur.getInstance().delete(t.getId())) {
                     new showForm(res).show();
                 }

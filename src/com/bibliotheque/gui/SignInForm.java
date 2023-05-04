@@ -55,7 +55,7 @@ public class SignInForm extends BaseForm {
         
 
         
-        add(BorderLayout.NORTH, new Label(res.getImage("Logo.png"), "LogoLabel"));
+        add(BorderLayout.NORTH, new Label(res.getImage("Clinimate.jpg"), "LogoLabel"));
         
         TextField Email = new TextField("", "Email", 20, TextField.ANY);
         TextField password = new TextField("", "Password", 20, TextField.PASSWORD);
