@@ -52,7 +52,7 @@ public class BaseForm extends Form {
 
     protected void addSideMenu(Resources res) {
         Toolbar tb = getToolbar();
-        Image img = res.getImage("profile-background.jpg");
+        Image img = res.getImage("Djerba-Dar Elbidha-147.jpg");
 
         ScaleImageLabel sl = new ScaleImageLabel(img);
         sl.setUIID("BottomPad");
@@ -65,6 +65,8 @@ public class BaseForm extends Form {
         ));
 
         tb.addMaterialCommandToSideMenu("Profile", FontImage.MATERIAL_SETTINGS, e -> new showForm(res).show());
+        tb.addMaterialCommandToSideMenu("Ajouter evenement", FontImage.MATERIAL_SETTINGS, e -> new AddForm(this,res).show());
+        tb.addMaterialCommandToSideMenu("afficher evenement", FontImage.MATERIAL_SETTINGS, e -> new ShowForm_1(this,res).show());
         tb.addMaterialCommandToSideMenu("Logout", FontImage.MATERIAL_EXIT_TO_APP, e -> {
             new SignInForm(res).show();
             SessionManager.pref.clearAll();

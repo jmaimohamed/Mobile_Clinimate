@@ -12,11 +12,13 @@
     <image name="news-item-4.jpg"  />
     <image name="news-item.jpg"  />
     <image name="oublier.png"  />
+    <image name="Djerba-Dar Elbidha-147.jpg"  />
     <image name="profile-background.jpg"  />
     <image name="signin-background.jpg"  />
     <image name="signup-background.jpg"  />
     <theme name="Theme">
         <val key="@includeNativeBool" value="true" />
+        <image name="Djerba-Dar Elbidha-147.jpg"  />
     </theme>
     <image name="timeline-background.jpg"  />
     <image name="welcome-background.jpg"  />
