@@ -52,7 +52,7 @@ public class BaseForm extends Form {
 
     protected void addSideMenu(Resources res) {
         Toolbar tb = getToolbar();
-        Image img = res.getImage("profile-background.jpg");
+        Image img = res.getImage("news-item-3.jpg");
 
         ScaleImageLabel sl = new ScaleImageLabel(img);
         sl.setUIID("BottomPad");
@@ -61,7 +61,7 @@ public class BaseForm extends Form {
         tb.addComponentToSideMenu(LayeredLayout.encloseIn(
                 sl,
                 FlowLayout.encloseCenterBottom(
-                        new Label(res.getImage("profile-pic.jpg"), "PictureWhiteBackgrond"))
+                        new Label(res.getImage("news-item-3.jpg"), "PictureWhiteBackgrond"))
         ));
 
         tb.addMaterialCommandToSideMenu("Profile", FontImage.MATERIAL_SETTINGS, e -> new showForm(res).show());
