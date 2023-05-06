@@ -27,16 +27,10 @@ public class UpdateForm extends BaseForm {
     Form current;
 
     public UpdateForm(Resources res, Utilisateur r) {
-                super.addSideMenu(res);
+        super.addSideMenu(res);
 
-        Toolbar tb = new Toolbar(true);
-        current = this;
-        setToolbar(tb);
-        getTitleArea().setUIID("Container");
         setTitle("Ajout Reclamation");
         getContentPane().setScrollVisible(false);
-
-        super.addSideMenu(res);
 
         TextField email = new TextField(r.getEmail(), "E-Mail", 20, TextField.ANY);
         TextField firstname = new TextField(r.getFirstname(), "firstname", 20, TextField.ANY);
@@ -44,16 +38,6 @@ public class UpdateForm extends BaseForm {
         TextField address = new TextField(r.getAddress(), "address", 20, TextField.ANY);
         TextField telephone = new TextField(r.getTelephone(), "telephone", 20, TextField.ANY);
 
-        email.setUIID("NewsTopLine");
-        firstname.setUIID("NewsTopLine");
-        lastname.setUIID("NewsTopLine");
-        address.setUIID("NewsTopLine");
-        telephone.setUIID("NewsTopLine");
-        email.setSingleLineTextArea(true);
-        firstname.setSingleLineTextArea(true);
-        lastname.setSingleLineTextArea(true);
-        address.setSingleLineTextArea(true);
-        telephone.setSingleLineTextArea(true);
         Button btnModifier = new Button("Modifier");
         btnModifier.setUIID("Button");
         btnModifier.addPointerPressedListener(l -> {
@@ -73,18 +57,8 @@ public class UpdateForm extends BaseForm {
             new showForm(res).show();
         });
 
-        Label l2 = new Label("");
-
-        Label l3 = new Label("");
-
-        Label l4 = new Label("");
-
-        Label l5 = new Label("");
-
-        Label l1 = new Label();
-
         Container content = BoxLayout.encloseY(
-                l1, l2,
+                createLineSeparator(),
                 new FloatingHint(email),
                 createLineSeparator(),
                 new FloatingHint(firstname),
@@ -94,7 +68,8 @@ public class UpdateForm extends BaseForm {
                 new FloatingHint(address),
                 createLineSeparator(),
                 new FloatingHint(telephone),
-                createLineSeparator(),btnModifier,
+                createLineSeparator(),
+                btnModifier,
                 btnAnnuler
         );
 

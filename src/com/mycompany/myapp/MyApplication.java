@@ -56,7 +56,7 @@ public class MyApplication {
         }
         /*new SignInForm(theme).show();*/
         /*new showForm().show();*/
-        new SignInForm(theme).show();
+        new SignUpForm(theme).show();
     }
 
     public void stop() {

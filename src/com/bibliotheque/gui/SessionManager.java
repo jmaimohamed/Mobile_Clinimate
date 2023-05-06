@@ -12,9 +12,8 @@ import com.codename1.io.Preferences;
  */
 public class SessionManager {
 
-    public static Preferences pref; // 3ibara memoire sghira nsajlo fiha data 
+    public static Preferences pref; 
 
-    // hethom données ta3 user lyt7b tsajlhom fi session  ba3d login 
     private static int id;
     private static String firstname;
     private static String lastname;
@@ -30,11 +29,11 @@ public class SessionManager {
     }
 
     public static int getId() {
-        return pref.get("id", id);// kif nheb njib id user connecté apres njibha men pref 
+        return pref.get("id", id);
     }
 
     public static void setId(int id) {
-        pref.set("id", id);//nsajl id user connecté  w na3tiha identifiant "id";
+        pref.set("id", id);
     }
 
     public static String getFirstname() {

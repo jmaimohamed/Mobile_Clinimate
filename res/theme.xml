@@ -1,23 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <resource majorVersion="1" minorVersion="11" useXmlUI="false">
-    <image name="activation-background.jpg"  />
     <image name="back.png"  />
-    <image name="confirmation-background.jpg"  />
-    <image name="dog.jpg"  />
-    <image name="map-pin.jpg"  />
-    <image name="news-item-1.jpg"  />
-    <image name="news-item-2.jpg"  />
-    <image name="news-item-3.jpg"  />
-    <image name="news-item-4.jpg"  />
-    <image name="news-item.jpg"  />
-    <image name="oublier.png"  />
-    <image name="profile-background.jpg"  />
-    <image name="signin-background.jpg"  />
-    <image name="signup-background.jpg"  />
+    <image name="c.png"  />
+    <image name="CliniMate.png"  />
+    <image name="CliniMateLogin.png"  />
+    <image name="cz.png"  />
+    <image name="cza.png"  />
+    <image name="Djerba-Dar Elbidha-147.jpg"  />
+    <image name="E.png"  />
+    <image name="Ez.png"  />
     <theme name="Theme">
         <val key="@includeNativeBool" value="true" />
     </theme>
-    <image name="timeline-background.jpg"  />
-    <image name="welcome-background.jpg"  />
 </resource>

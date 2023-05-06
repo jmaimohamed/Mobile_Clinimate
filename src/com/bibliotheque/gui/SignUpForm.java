@@ -72,7 +72,7 @@ public class SignUpForm extends BaseForm  {
                 new FloatingHint(telephone),
                 createLineSeparator()
         );
-        content.setScrollableY(true);
+        content.setScrollableY(false);
         add(BorderLayout.CENTER, content);
         add(BorderLayout.SOUTH, BoxLayout.encloseY(
                 next,

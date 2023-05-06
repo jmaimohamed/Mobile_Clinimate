@@ -6,24 +6,11 @@ package com.bibliotheque.gui;
 
 import com.bibliotheque.Entite.Utilisateur;
 import com.bibliotheque.Service.ServiceUtilisateur;
-import com.codename1.components.FloatingHint;
-import com.codename1.ui.Button;
-import com.codename1.ui.Container;
 import com.codename1.ui.Dialog;
-import com.codename1.ui.Display;
-import com.codename1.ui.Form;
 import com.codename1.ui.Label;
-import com.codename1.ui.TextField;
-import com.codename1.ui.layouts.BorderLayout;
-import com.codename1.ui.layouts.BoxLayout;
-import com.codename1.ui.layouts.FlowLayout;
 import com.codename1.ui.util.Resources;
-import java.util.ArrayList;
 import com.codename1.ui.Button;
-import com.codename1.ui.CheckBox;
-import com.codename1.ui.FontImage;
-import com.codename1.ui.Form;
-import com.codename1.ui.layouts.BoxLayout;
+import com.codename1.ui.Image;
 import com.codename1.ui.table.TableLayout;
 import java.util.ArrayList;
 
@@ -39,7 +26,7 @@ public class showForm extends BaseForm {
         users = ServiceUtilisateur.getInstance().getAllTasks();
         TableLayout tl = new TableLayout(users.size() + 1, 5);
         setLayout(tl);
-        setTitle("List Tasks");
+        setTitle("Liste de notre Utilisateur");
         super.addSideMenu(res);
         add(new Label("ID"));
         add(new Label("firstname"));
@@ -52,27 +39,30 @@ public class showForm extends BaseForm {
             add(new Label(t.getFirstname()));
             add(new Label(t.getLastname()));
             System.out.println(t.getFirstname());
-            Button Delete = new Button("Delete");
-            Button Update = new Button("Update");
+            Image cImage = res.getImage("cza.png");
+            Image EImage = res.getImage("Ez.png");
+            Button Delete = new Button(cImage);
+            Button Update = new Button(EImage);
             Delete.addActionListener(e -> {
 
                 Dialog dig = new Dialog("Suppression");
 
-                if (dig.show("Suppression", "delete account ?", "Annuler", "Oui")) {
+                if (dig.show("Delete", "veuillez vous supprimer cette compte ?", "Annuler", "Oui")) {
                     dig.dispose();
                 } else {
                     dig.dispose();
                 }
-                //n3ayto l suuprimer men service Reclamation
                 if (ServiceUtilisateur.getInstance().delete(t.getId())) {
                     new showForm(res).show();
                 }
 
             });
             add(Delete);
-            
-            Update.addActionListener(u ->{ System.out.println("hello update");
-            new UpdateForm(res,t).show();});
+
+            Update.addActionListener(u -> {
+                System.out.println("hello update");
+                new UpdateForm(res, t).show();
+            });
             add(Update);
         }
 
