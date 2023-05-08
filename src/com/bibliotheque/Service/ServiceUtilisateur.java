@@ -106,7 +106,7 @@ public class ServiceUtilisateur {
                 if (json.equals("failed")) {
                     Dialog.show("Echec d'authentification", "Username ou mot de passe éronné", "OK", null);
                 } else {
-                    System.out.println("data" + json);
+                    
                     Map<String, Object> user = j.parseJSON(new CharArrayReader(json.toCharArray()));
 
                     //Session 

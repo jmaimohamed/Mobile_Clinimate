@@ -67,6 +67,8 @@ public class BaseForm extends Form {
         tb.addMaterialCommandToSideMenu("Profile", FontImage.MATERIAL_SETTINGS, e -> new showForm(res).show());
         tb.addMaterialCommandToSideMenu("Ajouter evenement", FontImage.MATERIAL_SETTINGS, e -> new AddForm(this,res).show());
         tb.addMaterialCommandToSideMenu("afficher evenement", FontImage.MATERIAL_SETTINGS, e -> new ShowForm_1(this,res).show());
+          tb.addMaterialCommandToSideMenu("afficher chambre", FontImage.MATERIAL_SETTINGS, e -> new showchambre(this,res).show());
+
         tb.addMaterialCommandToSideMenu("Logout", FontImage.MATERIAL_EXIT_TO_APP, e -> {
             new SignInForm(res).show();
             SessionManager.pref.clearAll();
