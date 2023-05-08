@@ -4,13 +4,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/PI/Mobile_Clinimate/src/com/bibliotheque/gui/SignUpForm.java</file>
-            <file>file:/C:/xampp/htdocs/PI/Mobile_Clinimate/src/com/bibliotheque/gui/myaccountForm.java</file>
-            <file>file:/C:/xampp/htdocs/PI/Mobile_Clinimate/src/com/bibliotheque/gui/SignInForm.java</file>
-            <file>file:/C:/xampp/htdocs/PI/Mobile_Clinimate/src/com/bibliotheque/utils/Statics.java</file>
-            <file>file:/C:/xampp/htdocs/PI/Mobile_Clinimate/src/com/mycompany/myapp/MyApplication.java</file>
-            <file>file:/C:/xampp/htdocs/PI/Mobile_Clinimate/src/com/bibliotheque/gui/showForm.java</file>
-            <file>file:/C:/xampp/htdocs/PI/Mobile_Clinimate/src/com/bibliotheque/Service/ServiceUtilisateur.java</file>
+            <file>file:/C:/xampp/htdocs/PI%20Mobile/Mobile_Clinimate/src/com/mycompany/myapp/MyApplication.java</file>
+            <file>file:/C:/xampp/htdocs/PI%20Mobile/Mobile_Clinimate/src/com/bibliotheque/gui/StatsForm.java</file>
+            <file>file:/C:/xampp/htdocs/PI%20Mobile/Mobile_Clinimate/src/com/bibliotheque/utils/Statics.java</file>
+            <file>file:/C:/xampp/htdocs/PI%20Mobile/Mobile_Clinimate/src/com/bibliotheque/gui/ShowCategory.java</file>
+            <file>file:/C:/xampp/htdocs/PI%20Mobile/Mobile_Clinimate/src/com/bibliotheque/gui/LoginForm.java</file>
+            <file>file:/C:/xampp/htdocs/PI%20Mobile/Mobile_Clinimate/src/com/bibliotheque/gui/SideMenuBaseForm.java</file>
+            <file>file:/C:/xampp/htdocs/PI%20Mobile/Mobile_Clinimate/src/com/bibliotheque/gui/EditCategory.java</file>
+            <file>file:/C:/xampp/htdocs/PI%20Mobile/Mobile_Clinimate/src/com/bibliotheque/gui/WalkthruForm.java</file>
+            <file>file:/C:/xampp/htdocs/PI%20Mobile/Mobile_Clinimate/src/com/bibliotheque/gui/AddCategory.java</file>
+            <file>file:/C:/xampp/htdocs/PI%20Mobile/Mobile_Clinimate/src/com/bibliotheque/Entite/Categorie.java</file>
+            <file>file:/C:/xampp/htdocs/PI%20Mobile/Mobile_Clinimate/src/com/bibliotheque/Service/ServiceCategorie.java</file>
         </group>
     </open-files>
 </project-private>
