@@ -202,7 +202,7 @@ public class ServiceUtilisateur {
     }
 
     public boolean delete(int id) {
-        String url = Statics.BASE_URL + "/User/deleteee?id=" + id;
+        String url = Statics.BASE_URL + "/Userr/delete?id=" + id;
         req.setUrl(url);
         req.addResponseListener(new ActionListener<NetworkEvent>() {
             @Override
