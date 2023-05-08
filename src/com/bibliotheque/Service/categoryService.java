@@ -12,7 +12,6 @@ import com.codename1.io.JSONParser;
 import com.codename1.io.NetworkEvent;
 import com.codename1.io.NetworkManager;
 import com.codename1.ui.events.ActionListener;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +19,7 @@ import java.util.Map;
 
 /**
  *
- * @author kalle
+ * @author louay
  */
 public class categoryService {
 
@@ -55,25 +54,26 @@ public class categoryService {
     }
 
     public boolean deleteCategory(int id) {
-        String url = Statics.BASE_URL + "/deleteJSON?id=" + id ;
+    String url = Statics.BASE_URL + "/deleteJSON/" + id;
 
-        req.setUrl(url);
-        req.setPost(false);
-        req.setFailSilently(true);
-        req.addResponseListener(new ActionListener<NetworkEvent>() {
-            @Override
-            public void actionPerformed(NetworkEvent evt) {
-                resultat = req.getResponseCode() == 200;
-                req.removeResponseListener(this);
-            }
+    req.setUrl(url);
+    req.setPost(false);
+    req.setFailSilently(true);
+    req.addResponseListener(new ActionListener<NetworkEvent>() {
+        @Override
+        public void actionPerformed(NetworkEvent evt) {
+            resultat = req.getResponseCode() == 200;
+            req.removeResponseListener(this);
+        }
 
-        });
-        NetworkManager.getInstance().addToQueueAndWait(req);
-        return resultat;
-    }
+    });
+    NetworkManager.getInstance().addToQueueAndWait(req);
+    return resultat;
+}
+
 
     public void editCategory(productCategory category) {
-        String url = Statics.BASE_URL + "/updateJSON?id=" + category.getId();
+        String url = Statics.BASE_URL + "/updateJSON/" + category.getId() + "?nom_cat=" + category.getName();
         req.setUrl(url);
         req.addResponseListener((e) -> {
 
