@@ -28,9 +28,9 @@ public class AddCategory extends BaseForm {
 
     public AddCategory(Resources res) {
         super(BoxLayout.y());
+        super.addSideMenu(res);
 
-        Toolbar tb = getToolbar();
-        tb.setTitleCentered(false);
+       
 
         Button menuButton = new Button("");
         menuButton.setUIID("Title");
@@ -46,10 +46,9 @@ public class AddCategory extends BaseForm {
                 )
         );
 
-        tb.setTitleComponent(titleCmp);
 
         TextField titre = new TextField("", "nom ...");
-        titre.getStyle().setBgColor(0x000000);
+        titre.getStyle().setBgColor(0xffffff);
         titre.getStyle().setFgColor(0x000000);
         titre.getStyle().setBorder(Border.createRoundBorder(50, 50));
         titre.getStyle().setElevation(1);
