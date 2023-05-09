@@ -37,9 +37,10 @@ public class ShowCategory extends BaseForm {
 
     public ShowCategory(Resources res) {
         super(BoxLayout.y());
+        super.addSideMenu(res);
 
-        Toolbar tb = getToolbar();
-        tb.setTitleCentered(false);
+        //Toolbar tb = getToolbar();
+        //tb.setTitleCentered(false);
 
         Button menuButton = new Button("");
         menuButton.setUIID("Title");
@@ -55,7 +56,7 @@ public class ShowCategory extends BaseForm {
                 )
         );
 
-        tb.setTitleComponent(titleCmp);
+        //tb.setTitleComponent(titleCmp);
 
         Button newPost = new Button("Add new category");
 
