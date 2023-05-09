@@ -4,23 +4,15 @@
  */
 package com.bibliotheque.gui;
 
-import com.bibliotheque.Entite.productCategory;
-import com.bibliotheque.Service.categoryService;
-import com.bibliotheque.gui.AddCategory;
-import com.bibliotheque.gui.BaseForm;
-import com.bibliotheque.gui.EditCategory;
-import com.codename1.components.ImageViewer;
+import com.bibliotheque.Entite.Bilan;
+import com.bibliotheque.Service.BilanService;
 import com.codename1.ui.Button;
+import static com.codename1.ui.Component.LEFT;
 import com.codename1.ui.Container;
 import com.codename1.ui.Dialog;
-import com.codename1.ui.EncodedImage;
 import com.codename1.ui.FontImage;
-import com.codename1.ui.Image;
 import com.codename1.ui.Label;
-import com.codename1.ui.TextField;
 import com.codename1.ui.Toolbar;
-import com.codename1.ui.URLImage;
-import com.codename1.ui.geom.Dimension;
 import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.layouts.FlowLayout;
@@ -33,14 +25,14 @@ import java.util.ArrayList;
  *
  * @author kalle
  */
-public class ShowCategory extends BaseForm {
+public class ShowBilan extends BaseForm {
 
-    public ShowCategory(Resources res) {
+    public ShowBilan(Resources res) {
         super(BoxLayout.y());
         super.addSideMenu(res);
 
-        //Toolbar tb = getToolbar();
-        //tb.setTitleCentered(false);
+     //   Toolbar tb = getToolbar();
+       // tb.setTitleCentered(false);
 
         Button menuButton = new Button("");
         menuButton.setUIID("Titre");
@@ -51,30 +43,26 @@ public class ShowCategory extends BaseForm {
                 FlowLayout.encloseIn(menuButton),
                 BorderLayout.centerAbsolute(
                         BoxLayout.encloseY(
-                                new Label("Categorie", "Titre")
+                                new Label("Bilan", "Titre")
                         )
                 )
         );
 
         //tb.setTitleComponent(titleCmp);
 
-        Button newPost = new Button("Ajouter categorie");
+        Button newPost = new Button("Ajouter Bilan");
 
         newPost.setAlignment(LEFT);
         newPost.addActionListener((l) -> {
-            new AddCategory(res).show();
+            new AddBilan(res).show();
         });
 
-        add(new Label("Categorie", ""));
+        add(new Label("Bilan", ""));
         add(newPost);
-        /*add(SearchArea);
-        add(searchButton);*/
 
-        ArrayList<productCategory> Publications = categoryService.getInstance().showCategory();
+        ArrayList<Bilan> Publications = BilanService.getInstance().showBilan();
 
-        for (productCategory pubs : Publications) {
-
-            
+        for (Bilan pubs : Publications) {
 
             Button editPost = new Button("Modifier");
             editPost.getStyle().setBgColor(0xffffff);
@@ -84,7 +72,8 @@ public class ShowCategory extends BaseForm {
             editPost.getStyle().setPadding(1, 1, 1, 1);
             editPost.getStyle().setMargin(2, 2, 2, 2);
             editPost.addActionListener((l) -> {
-                new EditCategory(res, pubs).show();
+                //new EditPub(res, pubs).show();
+                new EditBilan(res, pubs).show();
             });
 
             Button deletePost = new Button("Supprimer");
@@ -95,27 +84,38 @@ public class ShowCategory extends BaseForm {
             deletePost.getStyle().setPadding(1, 1, 1, 1);
             deletePost.getStyle().setMargin(2, 2, 2, 2);
             deletePost.addActionListener((l) -> {
-                categoryService.getInstance().deleteCategory(pubs.getId());
-                if (categoryService.getInstance().deleteCategory(pubs.getId())) {
-                    Dialog.show("Success", "catergory deleted", "OK", null);
-                    
+                BilanService.getInstance().deleteBilan(pubs.getId());
+                if (BilanService.getInstance().deleteBilan(pubs.getId())) {
+                    Dialog.show("Success", "Post deleted", "OK", null);
+
                 }
-                new ShowCategory(res).show();
-                    refreshTheme();
+                new ShowBilan(res).show();
+                refreshTheme();
             });
 //String username = user.getUsername();
-            Label nom = new Label("Nom: " + pubs.getName());
-            nom.getAllStyles().setFgColor(0xffffff);
+            Label antecedent = new Label("Antecedent: " + pubs.getAntecedents());
+            antecedent.getAllStyles().setFgColor(0xffffff);
 
+            Label taille = new Label("Taille: " + pubs.getTaille());
+            taille.getAllStyles().setFgColor(0xffffff);
+
+            Label poids = new Label("Poids: " + pubs.getPoids());
+            poids.getAllStyles().setFgColor(0xffffff);
+
+            Label examenB = new Label("ExamenB: " + pubs.getExamensBiologiques());
+            examenB.getAllStyles().setFgColor(0xffffff);
+
+            Container post = BoxLayout.encloseY(
+                    GridLayout.encloseIn(3, taille, poids, examenB));
             Container first = GridLayout.encloseIn(1, editPost);
             Container second = GridLayout.encloseIn(1, deletePost);
             Container pub = BoxLayout.encloseY(
                     BorderLayout.centerAbsolute(
                             BoxLayout.encloseY(
-                                    nom
+                                    antecedent
                             )
                     ),//.add(BorderLayout.WEST, pubImage),
-                    BoxLayout.encloseY(first, second)
+                    BoxLayout.encloseY(post, first, second)
             );
 
             pub.getStyle().setFgColor(0xffffff);
@@ -128,7 +128,4 @@ public class ShowCategory extends BaseForm {
             add(pub);
         }
     }
-
-
-
 }
